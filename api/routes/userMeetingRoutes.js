@@ -3,7 +3,7 @@ const router = express.Router();
 const UserMeeting = require('../models/UserMeeting');
 
 // GET All UserMeetings
-router.get('/', async (req, res) => {
+router.get('/all', async (req, res) => {
     try {
         const userMeetings = await UserMeeting.find();
         res.json(userMeetings);
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 });
 
 // GET Single UserMeeting by userID
-router.get('/:userMeetingID', async (req, res) => {
+router.get('/id/:userMeetingID', async (req, res) => {
     try {
         const userMeetingID = Number(req.params.userMeetingID);
         if (isNaN(userMeetingID)) {
@@ -32,7 +32,7 @@ router.get('/:userMeetingID', async (req, res) => {
 });
 
 // POST New UserMeeting
-router.post('/', async (req, res) => {
+router.post('/create', async (req, res) => {
     const { userID, name, meetingID, isProxy, role } = req.body;
 
     const userMeeting = new UserMeeting({

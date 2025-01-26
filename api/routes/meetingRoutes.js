@@ -3,7 +3,7 @@ const router = express.Router();
 const Meeting = require('../models/Meeting');
 
 // GET All Meetings
-router.get('/', async (req, res) => {
+router.get('/all', async (req, res) => {
     try {
         const meetings = await Meeting.find();
         res.json(meetings);
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 });
 
 // GET Single Meeting by meetingID
-router.get('/:meetingID', async (req, res) => {
+router.get('/id/:meetingID', async (req, res) => {
     try {
         const meetingID = Number(req.params.meetingID);
         if (isNaN(meetingID)) {
@@ -44,7 +44,7 @@ async function generateRandomMeetingID() {
 }
 
 // POST New Meeting
-router.post('/', async (req, res) => {
+router.post('/create', async (req, res) => {
     try {
         // Instead of reading meetingID from req.body, generate it:
         const meetingID = await generateRandomMeetingID();

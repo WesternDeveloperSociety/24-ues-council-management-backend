@@ -3,7 +3,7 @@ const router = express.Router();
 const Motion = require('../models/Motion');
 
 // GET All Motions
-router.get('/', async (req, res) => {
+router.get('/all', async (req, res) => {
     try {
         const motions = await Motion.find();
         res.json(motions);
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 });
 
 // GET Single Motion by motionID
-router.get('/:motionID', async (req, res) => {
+router.get('/id/:motionID', async (req, res) => {
     try {
         const motionID = Number(req.params.motionID);
         if (isNaN(motionID)) {
@@ -32,7 +32,7 @@ router.get('/:motionID', async (req, res) => {
 });
 
 // POST New Motion
-router.post('/', async (req, res) => {
+router.post('/create', async (req, res) => {
     const { motionID, meetingID, description, resultLink, requiredVotes } = req.body;
 
     const motion = new Motion({

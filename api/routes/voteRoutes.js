@@ -3,7 +3,7 @@ const router = express.Router();
 const Vote = require('../models/Vote');
 
 // GET All Votes
-router.get('/', async (req, res) => {
+router.get('/all', async (req, res) => {
     try {
         const votes = await Vote.find();
         res.json(votes);
@@ -13,7 +13,7 @@ router.get('/', async (req, res) => {
 });
 
 // Display votes for a specific motion
-router.get('/motion', async (req, res) => {
+router.get('/motion/:motionID', async (req, res) => {
     try {
         const { motionID } = req.query;
         if (!motionID) {
@@ -49,7 +49,7 @@ router.get('/:voteID', async (req, res) => {
 });
 
 // POST New Vote
-router.post('/', async (req, res) => {
+router.post('/create', async (req, res) => {
     const { voteID, motionID, userID, vote } = req.body;
     const newVote = new Vote({ voteID, motionID, userID, vote });
 
