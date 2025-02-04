@@ -1,0 +1,84 @@
+### 1) Create a Meeting with Random ID
+POST http://localhost:3000/api/meetings
+Content-Type: application/json
+
+{
+  "date": "2025-01-18T10:00:00.000Z"
+}
+
+### 2) Get All Meetings
+GET http://localhost:3000/api/meetings
+
+### 3) Get Single Meeting by ID
+# Replace 1234 with an actual existing meetingID returned from the previous request
+GET http://localhost:3000/api/meetings/8960
+
+---
+
+### 4) Create a Motion
+POST http://localhost:3000/api/motions
+Content-Type: application/json
+
+{
+  "motionID": 140,
+  "meetingID": 7692,
+  "description": "Test motion",
+  "resultLink": "http://example.com/result1",
+  "requiredVotes": 3
+}
+
+### 5) Get All Motions
+GET http://localhost:3000/api/motions
+
+### 6) Get Single Motion
+# Replace 101 with your actual motionID
+GET http://localhost:3000/api/motions/140
+
+---
+
+### 7) Create a UserMeeting (Insert User Info)
+POST http://localhost:3000/api/usermeetings
+Content-Type: application/json
+
+{
+  "userID": 5,
+  "name": "Chris",
+  "meetingID": 9517,
+  "isProxy": 1,
+  "role": "Second Year Rep"
+}
+
+### 8) Get All UserMeetings
+GET http://localhost:3000/api/usermeetings
+
+### 9) Get Single UserMeeting
+GET http://localhost:3000/api/usermeetings/1
+
+---
+
+### 10) Create a Vote
+POST http://localhost:3000/api/votes
+Content-Type: application/json
+
+{
+  "voteID": 99,
+  "motionID": 101,
+  "userID": 5,
+  "vote": "Against"
+}
+
+### 11) Get All Votes
+GET http://localhost:3000/api/votes
+
+### 12) Get Single Vote
+GET http://localhost:3000/api/votes/301
+
+---
+
+### 13) Display Vote Info for a Motion
+GET http://localhost:3000/api/votes/motion?motionID=520
+
+---
+
+### 14) Display Attendance (by meetingID)
+GET http://localhost:3000/api/usermeetings/attendance/list?meetingID=8960&role=admin
