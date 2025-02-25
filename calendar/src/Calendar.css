@@ -1,0 +1,54 @@
+/* src/Calendar.css */
+.calendar {
+    font-family: Arial, sans-serif;
+    max-width: 600px; /* Increase the max-width to make the calendar bigger */
+    margin: 0 auto; /* Center the calendar horizontally */
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd; /* Optional: Add a border for better visibility */
+    border-radius: 10px; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow */
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px; /* Increase margin for better spacing */
+  }
+  
+  .calendar-header button {
+    background: none;
+    border: none;
+    font-size: 20px; /* Increase font size for buttons */
+    cursor: pointer;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px; /* Increase gap between cells */
+  }
+  
+  .calendar-day-header {
+    font-weight: bold;
+    padding: 15px; /* Increase padding for header cells */
+    background-color: #f0f0f0;
+    font-size: 18px; /* Increase font size for headers */
+  }
+  
+  .calendar-day {
+    padding: 15px; /* Increase padding for day cells */
+    border: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 16px; /* Increase font size for days */
+  }
+  
+  .calendar-day:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .today {
+    background-color: #007bff;
+    color: white;
+  }

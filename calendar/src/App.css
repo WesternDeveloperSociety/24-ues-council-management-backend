@@ -1,0 +1,39 @@
+/* src/App.css */
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  position: relative;
+}
+
+.header {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between timestamp and logo */
+}
+
+.timestamp {
+  font-size: 18px;
+  color: #666;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 120px; /* Adjust the size of the logo */
+  height: 120px; /* Adjust the size of the logo */
+  border-radius: 8px; /* Optional: Add rounded corners */
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
