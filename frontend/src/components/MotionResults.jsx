@@ -1,8 +1,15 @@
-import React from 'react';
-import './MotionResults.css';
+import React from "react";
+import "../styles/MotionResults.css";
 
-const MotionResults = ({ motionName, userVote, forVotes, againstVotes, abstainVotes, threshold, onClose }) => {
-  // Calculate total votes and determine if the motion passed
+const MotionResults = ({
+  motionName,
+  userVote,
+  forVotes,
+  againstVotes,
+  abstainVotes,
+  threshold,
+  onClose,
+}) => {
   const totalVotes = forVotes + againstVotes + abstainVotes;
   const requiredForPass = threshold * totalVotes;
   const passed = forVotes >= requiredForPass;
@@ -11,17 +18,25 @@ const MotionResults = ({ motionName, userVote, forVotes, againstVotes, abstainVo
     <div className="motion-results">
       {onClose && (
         <button className="close-button" onClick={onClose} aria-label="Close">
-          X
+          ✖
         </button>
       )}
-      <h1 className={passed ? 'passed' : 'failed'}>{passed ? 'PASSED' : 'FAILED'}</h1>
-      <p>Motion: {motionName}</p>
-      <p>Your Vote: {userVote}</p>
-      <div className="results-breakdown">
-        <p>For: {forVotes}</p>
-        <p>Against: {againstVotes}</p>
-        <p>Abstain: {abstainVotes}</p>
-      </div>
+      <h1>
+        {passed ? (
+          <span className="passed-text">PASSED</span>
+        ) : (
+          <span className="failed-text">FAILED</span>
+        )}
+      </h1>
+      <p>
+        <strong>Motion:</strong> {motionName}
+      </p>
+      <p>
+        <strong>Your Vote:</strong> {userVote}
+      </p>
+      <p>
+        <strong>Results:</strong> {forVotes}/{againstVotes}/{abstainVotes}
+      </p>
     </div>
   );
 };
