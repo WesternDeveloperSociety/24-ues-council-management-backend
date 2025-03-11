@@ -1,0 +1,117 @@
+/* src/MotionDetailsPage.css */
+.motion-details-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.motion-details-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.time-display {
+  font-size: 14px;
+  color: #333;
+}
+
+.ues-logo {
+  width: 50px;
+  height: 50px;
+  background-color: #6a5acd;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.motion-content {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.motion-title {
+  font-size: 24px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.motion-status {
+  font-size: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.motion-status .passed {
+  color: #4CAF50;
+  font-weight: bold;
+}
+
+.motion-status .failed {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.motion-votes-header {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.votes-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vote-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  font-size: 18px;
+}
+
+.vote-row:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.voter-name {
+  font-weight: bold;
+}
+
+.back-button {
+  display: block;
+  margin: 20px auto 0;
+  padding: 10px 20px;
+  background-color: #6a5acd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.back-button:hover {
+  background-color: #5849b5;
+}
+
+/* Add some style for the calendar connection */
+.calendar-day.clickable {
+  cursor: pointer;
+}
+
+.calendar-day.clickable:hover {
+  background-color: #f0f0f0;
+}
