@@ -1,0 +1,113 @@
+/* Import the Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Main container */
+.voting-page-container {
+  /*aspect-ratio: 850 / 465;*/
+  /*width: 60vw;*/
+  max-width: 900px;
+  /*max-height: 465px;*/
+  background-color: white;
+  border-radius: 28px;
+  border: 1px solid #000000;
+  box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+/* Title */
+.motion-title {
+  /*font-size: clamp(1.2rem, 4vw, 3.5rem);*/
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+  color: #000000;
+  font-weight: normal;
+  margin-bottom: 40px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-height: 30%;
+}
+
+.vote-type {
+  font-weight: bold;
+}
+
+/* Voting options container */
+.vote-options {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+/* Individual voting option (button + count) */
+.vote-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/* Voting button */
+.vote-button {
+  width: clamp(120px, 20vw, 210px);
+  height: clamp(80px, 15vw, 130px);
+  background-color: #EDEDED;
+  border-radius: 20px;
+  border: 1px solid #430A66;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+
+  margin: 30px 20px 0px 20px;
+}
+
+.vote-button.selected {
+  border-width: 4px;
+}
+
+/* Button label */
+.vote-label {
+  font-size: clamp(1.5rem, 1.7vw, 2.5rem);
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Vote count below button */
+.vote-count {
+  margin-top: 10px;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600; /* Semi-bold */
+  color: #000000;
+}
+
+/* Submit button */
+.submit-button {
+  width: 130px;
+  height: 40px;
+  border-radius: 9px;
+  background: linear-gradient(to right, #000000, #882EE3);
+  border: none;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600; /* Semi-bold */
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
