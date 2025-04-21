@@ -20,7 +20,7 @@ router.get('/motion/:motionID', async (req, res) => {
             return res.status(400).json({ message: 'motionID query parameter is required' });
         }
 
-        const votes = await Vote.find({ motionID: Number(motionID) })
+        const votes = await Vote.find({ motionID: motionID })
             .select('vote userID motionID -_id');
 
         res.json(votes);

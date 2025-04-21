@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Global styles */
+body {
+  margin: 0;
+  background-color: #F5F5F5;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Wrapper for entire results page */
+.voting-results-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center container box */
+}
+
+/* Title + status section */
+.title-status-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.motion-title {
+  font-size: 2.1rem;
+  color: #000000;
+  margin: 0 auto 8px auto;
+  padding: 0 10px;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.motion-title .vote-type {
+  font-weight: bold;
+}
+
+.status {
+  margin: 0;
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+}
+
+.status-passed {
+  font-weight: bold;
+  background: linear-gradient(to right, #18C615, #131713);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.status-failed {
+  font-weight: bold;
+  background: linear-gradient(to right, #C61518, #171313);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Voting container box */
+.voting-results-container {
+  width: 550px;
+  aspect-ratio: 450 / 500;
+  max-width: 100%;
+  max-height: 625px;
+  background-color: white;
+  border-radius: 20px;
+  border: 1px solid #000000;
+  box-shadow: 0 0 15px 6px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px;
+  box-sizing: border-box;
+  margin: 0 auto;
+
+  overflow-y: auto;
+}
+
+.voting-results-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.voting-results-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+.votes-section {
+  width: 100%;
+  padding: 0 25px;
+  box-sizing: border-box;
+}
+
+.votes-list {
+  text-align: left;
+}
+
+.vote-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #000000;
+}
+
+.voter-name {
+  font-weight: 600;
+}
+
+.voter-vote {
+  font-weight: normal;
+}
+
+.no-votes {
+  font-size: 1.2rem;
+  color: #000000;
+  text-align: center;
+  margin-top: 20px;
+}

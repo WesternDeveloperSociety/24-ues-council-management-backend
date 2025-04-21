@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.motion-results {
+  aspect-ratio: 850 / 465;
+  width: 50vw;
+  max-width: 850px;
+  /*max-height: 465px;*/
+  background-color: white;
+  padding: 10px 25px 5px 25px;
+  border-radius: 30px;
+  border: 1px solid #000000;
+  box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  position: relative;
+}
+
+h1 {
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
+  font-weight: bold;
+}
+
+p {
+  font-size: clamp(1rem, 2vw, 3rem);
+  text-align: left;
+  margin-left: 5.5%;
+}
+
+.passed-text {
+  font-weight: bold;
+  background: linear-gradient(to right, #18C615, #131713);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.failed-text {
+  font-weight: bold;
+  background: linear-gradient(to right, #C61518, #171313);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.close-button {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  width: 4%;
+  margin: 10px 10px;
+  aspect-ratio: 1 / 1;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.close-button img {
+  width: 90%;
+  height: 100%;
+  object-fit: contain;
+}
+
+
+strong {
+  font-weight: bold;
+}
